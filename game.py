@@ -2,7 +2,7 @@ import random
 
 words = ['skillfactory', 'testing', 'blackbox', 'pytest', 'unittest', 'coverage']
 word = ''
-word_shown = ''
+word_shown = []
 count_attempts = 4
 
 
@@ -18,6 +18,9 @@ def getAllPositions(ch):
 def makeChoice():
 	showWord()
 	let = input('Enter a letter: ')
+	return checkChoice(let)
+	
+def checkChoice(let):
 	if let in word and len(let)==1:
 		arr_pos=getAllPositions(let)
 		for pos in arr_pos:
